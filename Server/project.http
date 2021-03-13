@@ -1,0 +1,78 @@
+POST http://localhost:3000/api/project/get
+content-type: application/json
+
+{
+    "page": 1,
+    "sortType": "unset"
+}
+
+
+ 
+###
+PUT  http://localhost:3000/api/project/update
+content-type: application/json
+
+{
+    "_id": "5fda26de0245dc1c0c9a3779",
+    "features": [
+        {
+            "level": "1",
+            "name": "search",
+            "featureDescription": "search",
+            "minEstimate": "0.15",
+            "maxEstimate": "0.30"
+        },
+        {
+            "level": "2",
+            "name": "Authorization: ",
+            "featureDescription": "Authorization",
+            "minEstimate": "0.15",
+            "maxEstimate": "0.30"
+        },
+        {
+            "level": "3",
+            "name": "Login",
+            "featureDescription": "search",
+            "minEstimate": "0.15",
+            "maxEstimate": "0.30"
+        },
+        {
+            "level": "4",
+            "name": "search",
+            "featureDescription": "search",
+            "minEstimate": "0.15",
+            "maxEstimate": "0.30"
+        }
+    ]
+}
+###
+POST  http://localhost:3000/api/project/create
+content-type: application/json
+
+{
+    "features": [
+        {
+            "level": "1",
+            "name": "search",
+            "featureDescription": "search",
+            "minEstimate": "0.15",
+            "maxEstimate": "0.30"
+        }
+    ],
+    "title": "Test",
+    "description": "framework"
+}
+
+
+###
+GET  http://localhost:3000/api/project/getOne/?_id=5fd0cc0285127b25e08e7b95
+content-type: application/json
+
+### 
+GET  http://localhost:3000/api/project/aggregate/?name=se
+content-type: application/json
+
+###
+GET  http://localhost:3000/api/project/features/?_id=5fdb57900623502c7f8d13e6&level=1
+content-type: application/json
+

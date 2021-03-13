@@ -1,0 +1,19 @@
+version: "3"
+services:
+  server:
+    build: ./server
+    ports: 
+      - "3000:3000"
+    depends_on: 
+      - db
+    container_name: server
+  client:
+    build: ./client
+    ports: 
+      - "8080:80"
+    container_name: client
+  db: 
+    image: mongo
+    ports: 
+      - "27017:27017"
+    container_name: test-db 

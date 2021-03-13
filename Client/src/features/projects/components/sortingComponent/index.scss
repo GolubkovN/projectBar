@@ -1,0 +1,18 @@
+@import "../../../../styles/var.scss";
+
+.sort {
+    background-color: transparent;
+    border: 1px solid #1890ff;
+    border-radius: 4px;
+    margin: 0;
+    width: 270px;
+    font-family: $titleFont;
+    letter-spacing:  2px;
+    font-size: 15px;
+    padding: 5px 10px;
+    cursor: pointer;
+
+    &:focus {
+        outline: #1890ff;
+    }
+  }

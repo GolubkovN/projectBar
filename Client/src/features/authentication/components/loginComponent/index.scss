@@ -1,0 +1,66 @@
+@import "../../../../styles/var.scss";
+
+.login-form {
+    width: 400px;
+    min-height: 400px;
+
+    h2 {
+        font-family: $titleFont;
+    }
+    
+}
+
+.login_controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.login__btn-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: $titleFont;
+    margin-top: 50px;
+
+    .login__registr-link {
+        margin-left: 5px;
+    }
+}
+
+.notice {
+    border: 2px solid #A62122;
+    border-radius: 4px;
+    padding: 10px;
+    line-height: 1;
+    background-color: #FF9494;
+    font-family: $titleFont;
+    letter-spacing: 2px;
+    font-weight: normal;
+    color: #A62122;
+    position: relative;
+    transform: translateY(-100px);
+    z-index: 1;
+    transition: transform .2s linear;
+
+    &::before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        border: 2px solid #A62122;
+        border-right: none;
+        border-bottom: none;
+        background-color: #FF9494;
+        position: absolute;
+        top: -10px;
+        left: 10px;
+        transform: rotate(45deg);
+    }
+}
+
+.notice.open {
+    transform: translateY(15px);
+}

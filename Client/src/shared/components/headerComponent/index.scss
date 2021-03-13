@@ -1,0 +1,87 @@
+@import "../../../styles/var.scss";
+
+.header {
+    width: 100%;
+    padding: 0 30px;
+    background-color: #1890ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+    margin-bottom: 80px;
+
+    a {
+        font-family: $titleFont;
+        letter-spacing: 2px;
+        color: #fff;
+        font-size: 18px;
+        line-height: 1;
+        text-transform: uppercase;
+    }
+
+    .logo {
+        font-family: $titleFont;
+        font-size: 50px;
+        text-transform: uppercase;
+    }
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 80px;
+}
+
+.nav__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+    li {
+        margin-right: 20px;
+        overflow: hidden;
+
+        a {
+            font-weight: bold;
+            display: block;
+            position: relative;
+            transition: transform .3s;
+
+            &:hover,
+            &:focus {
+                transform: translateY(-100%);
+                opacity: 1;
+            }
+
+            &::before {
+                position: absolute;
+                top: 100%;
+                content: attr(data-hover);
+                color: #05316D;
+                transform: translate3d(0, 1px, 0);
+            }
+        }
+
+        .log-out {
+            margin-left: 100px;
+        
+            &::before {
+                color: #FF0000;
+            }
+        }
+    }
+}

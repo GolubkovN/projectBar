@@ -1,0 +1,37 @@
+@import "../../../styles/var.scss";
+
+.footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90px;
+    margin-top: 80px;
+    position: relative;
+
+    &::after,
+    &::before {
+        content: "";
+        position: absolute;
+        width: 90%;
+        height: 1px;
+        background-color: #1890ff;
+    }
+
+    &::after {
+        bottom: 0;
+        left: 0;
+    }
+
+    &::before {
+        top: 0;
+        right: 0;
+    }
+
+    .logo {
+        font-family: $titleFont;
+        font-size: 50px;
+        color: #1890ff;
+        line-height: 1;
+    }
+}
